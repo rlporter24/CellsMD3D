@@ -1,0 +1,51 @@
+Radius		0.5
+L_divide	3.0
+k_cc		200000.0
+k_wc		200000.0
+var_L		0.25
+var_angle	0.001
+var_pos		0.0
+
+Wall_Mu		0.8
+Cell_Mu		0.2
+Wall_Rough	0.2
+Viscosity	0.2
+Gamma		10000.0
+
+Density_Threshold	0.55
+Surface_Tension		500.0
+Delta_H			-0.01
+
+Growth_Rate		1.0
+MaintenanceRate		0.0
+
+IniColonyRadius		4.0
+IniColonySize		2
+
+KC			0.02
+C_rate   		0.0017
+Diff_Colony		0.15
+Diff_Agar		1.0
+maxCarbon	0.5
+
+t_max		12.0
+dt		0.00005
+Cdt		0.1
+Box_x		128
+Box_y		128
+Box_z		20
+Box_z_agar	16
+maxLevels	4
+FilterLen	5
+
+Output_Time	0.1
+Update_Time	0.01
+minIter		10
+maxIter		50000
+ConvCrit	0.01
+InterfaceCondition	1
+NutrientGSI	0
+MaxCells	1000000
+refinementGridHeight 2
+
+
