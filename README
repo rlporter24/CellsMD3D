@@ -1,5 +1,7 @@
 # README file
 
+### This code is associated with the paper from Warren, Sin et al., "Spatiotemporal establishment of dense bacterial colonies growing on hard agar". eLife, 2019. http://dx.doi.org/10.7554/eLife.41093
+
 ###############################
 
 # how to compile and run the cpp code?
