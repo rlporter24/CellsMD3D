@@ -374,10 +374,15 @@ void sum_forces(const Cell& cell, const Cell* cell_array, const int* neighbours,
 	Fnet = sum(Fnet, F);
 	Tnet = sum(Tnet, T);
 
-	F_surf_tension(cell, Grid, XYAddress, Height, Normal, F, T);
+//	F_surf_tension(cell, Grid, XYAddress, Height, Normal, F, T);
 	Fnet = sum(Fnet, F);
 	Tnet = sum(Tnet, T);
-    
+//	std::cout << cell.GrowthRate << std::endl;
+//	std::cout << cell.Position.p.x << " " << cell.Position.p.y << " " << cell.Position.p.z << std::endl;
+//	std::cout << cell.Position.q.x << " " << cell.Position.q.y << " " << cell.Position.q.z << std::endl;
+	if (cell.Position.p.z<0.7 && cell.Position.q.z<0.7)
+		Tnet = sum(Tnet, DoubleCoord(0.0,0.0,50.0*cell.GrowthRate));
+//	std::cout << Tnet.x << " " << Tnet.y << " " << Tnet.z << '\n';
 
 }
 

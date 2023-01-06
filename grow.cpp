@@ -63,7 +63,10 @@ void grow(double dt, Cell& cell, EnvArray3D& Env, AgaArray2D** Wal, UniformGrid&
 
 	cell.Position.p = diff(cell.Position.p,dv);
 	cell.Position.q = sum(cell.Position.q,dv);
-	cell.GrowthRate = Growth_rate;
+	if (cell.Position.p.z<0.7 && cell.Position.q.z<0.7)
+		cell.GrowthRate = Growth_rate;
+	else
+		cell.GrowthRate = 0.0;
 	if (cell.Ancestor==0)
 			printf("wrong growth! Ancestor is zero! \n");
 
